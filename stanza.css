@@ -52,7 +52,7 @@ togostanza-scroll-table {
   --togostanza-tbody-border-bottom: 1px solid #dee2e6;
   --togostanza-tbody-font-color: #444444;
   --togostanza-tbody-font-size: 14px;
-  --togostanza-thead-font-weight: 400;
+  --togostanza-tbody-font-weight: 400;
   --togostanza-tbody-odd-background-color: #ffffff;
   --togostanza-tbody-even-background-color: #ffffff;
   --togostanza-control-border: 1px solid #aaa;
@@ -85,7 +85,7 @@ togostanza-scorecard {
   --togostanza-key-font-weight: 400;
   --togostanza-value-font-color: #444444;
   --togostanza-value-font-size: 36;
-  --togostanza-key-font-weight: 600;
+  --togostanza-value-font-weight: 600;
 }
 
 togostanza-hash-table {
@@ -353,6 +353,31 @@ togostanza-hash-table {
 main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   display: flex;
 }
+:host(togostanza-scroll-table) .tableWrapper > table {
+  line-height: 1;
+}
+:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th,
+:host(togostanza-scroll-table) .tableWrapper > table > tbody > tr > td {
+  padding: 4px;
+  overflow: auto;
+  position: relative;
+}
+:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th {
+  padding-top: 7px;
+  white-space: nowrap;
+  position: sticky;
+  background-color: var(--togostanza-thead-background-color);
+  z-index: 1;
+}
+:host(togostanza-scroll-table) .tableWrapper > table > thead {
+  border-bottom: none;
+}
+:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px #444;
+}
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
   min-height: auto;
 }
@@ -417,31 +442,6 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   > span
   .label {
   overflow: inherit;
-}
-:host(togostanza-scroll-table) .tableWrapper > table {
-  line-height: 1;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th,
-:host(togostanza-scroll-table) .tableWrapper > table > tbody > tr > td {
-  padding: 4px;
-  overflow: auto;
-  position: relative;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th {
-  padding-top: 7px;
-  white-space: nowrap;
-  position: sticky;
-  background-color: var(--togostanza-thead-background-color);
-  z-index: 1;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead {
-  border-bottom: none;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th::after {
-  content: '';
-  display: block;
-  width: 100%;
-  border-bottom: solid 1px #444;
 }
 :host(togostanza-hash-table) .container dl {
   padding: 0;
