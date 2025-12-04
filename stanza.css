@@ -88,7 +88,7 @@ togostanza-hash-table {
   --togostanza-value-font-weight: 400;
 }
 
-.clinical-significance:before {
+/* .clinical-significance:before {
   content: attr(data-sign) "";
   width: 18px;
   line-height: 18px;
@@ -219,7 +219,7 @@ togostanza-hash-table {
 }
 .star-rating > .star-rating-item[data-stars="4"] {
   width: 100%;
-}
+} */
 .chromosome-position {
   white-space: nowrap;
 }
