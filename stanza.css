@@ -353,7 +353,7 @@ togostanza-hash-table {
 main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   display: flex;
 }
-:host {
+:host(togostanza--menu) {
     position: sticky;
     background-color: red;
     opacity: 0.8;
