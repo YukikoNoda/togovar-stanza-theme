@@ -363,6 +363,16 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
     margin-left: auto;
     width: fit-content;
 }
+:host(togostanza-variant-frequency) {
+    position: sticky;
+    background-color: red;
+    opacity: 0.8;
+    bottom: 0;
+    right: 10px;
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+}
 
 /* メニュー要素にも同じスタイルを適用 */
 togostanza--menu {
