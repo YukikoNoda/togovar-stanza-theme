@@ -411,8 +411,7 @@ togostanza--menu {
   width: 100%;
   border-bottom: solid 1px #444;
 }
-:host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
-  background-color: red;
+/* :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
   min-height: auto;
 }
 :host(togostanza-pagination-table)
@@ -476,7 +475,7 @@ togostanza--menu {
   > span
   .label {
   overflow: inherit;
-}
+} */
 :host(togostanza-hash-table) .container dl {
   padding: 0;
   line-height: 1.2;
