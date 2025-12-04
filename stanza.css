@@ -412,6 +412,7 @@ togostanza--menu {
   border-bottom: solid 1px #444;
 }
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
+  background-color: red;
   min-height: auto;
 }
 :host(togostanza-pagination-table)
