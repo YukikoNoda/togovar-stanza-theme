@@ -149,6 +149,7 @@ togostanza-hash-table {
   border: 1px solid;
   border-radius: 8.5px;
   padding: 0 7px;
+  white-space: nowrap;
 }
 .clinical-significance-full[data-sign=P] {
   color: #FF5A54;
