@@ -329,7 +329,7 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   min-height: auto;
 }
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableOption {
-	padding: 4px 6px 0;
+	padding: 4px 6px;
   margin-bottom: 0;
 }
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableWrapper > table {
