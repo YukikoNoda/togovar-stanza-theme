@@ -322,6 +322,9 @@ togostanza-hash-table {
 main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   display: flex;
 }
+:host(togostanza-pagination-table)  {
+ --togostanza-fonts-font_size_small: 12;
+}
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
   min-height: auto;
 }
