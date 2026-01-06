@@ -326,6 +326,9 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
 :host(togostanza-pagination-table)  {
  --togostanza-fonts-font_family: 'Roboto Condensed', sans-serif;
  --togostanza-fonts-font_size_small: 14;
+  .line-clamp{
+	 padding: 2px;
+ }
 }
 :host(togostanza-pagination-table) .wrapper > .tableOptionWrapper {
   min-height: auto;
