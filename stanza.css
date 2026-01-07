@@ -347,15 +347,22 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
 					border-top: none;
 				    line-height: 1;
 		
-					> thead > tr {
-						> th {
-							padding: 4px;
-						}						
+					> thead > tr > th {
+						padding: 4px;						
 					}
+
+					> tbody > tr {
+						border-bottom: var(--togostanza-tbody-border-bottom);
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+					
 					.icon.active path {
 						opacity: 1;
 					}
-				}	  
+				}
 		    }
 		}
 
