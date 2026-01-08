@@ -326,6 +326,13 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
   display: flex;
 }
 
+:host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableWrapper > table > tbody > tr > td a,
+:host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableWrapper > table > tbody > tr > td a .label,
+:host(togostanza-scroll-table) .tableWrapper > table > tbody > tr > td > span > a,
+:host(togostanza-hash-table) .container dd > a {
+  color: #256D80;
+}
+
 /* ==============================
  togostanza-pagination-table
 ============================== */
@@ -398,37 +405,41 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
 	}
 }
 
-:host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableWrapper > table > tbody > tr > td a,
-:host(togostanza-pagination-table) .wrapper > .tableOptionWrapper > .tableWrapper > table > tbody > tr > td a .label,
-:host(togostanza-scroll-table) .tableWrapper > table > tbody > tr > td > span > a,
-:host(togostanza-hash-table) .container dd > a {
-  color: #256D80;
-}
+/* ==============================
+ togostanza-scroll-table
+============================== */
+
 :host(togostanza-scroll-table) .tableWrapper > table {
 	line-height: 1;
+	position: relative;
+
+	thead > tr > th,
+	tbody > tr > td {
+		padding: 4px;
+	}
+
+	thead {
+		border-bottom: none;
+
+		> tr > th {
+		  padding-top: 7px;
+		  white-space: nowrap;
+		  z-index: 1;
+		  font-weight: bold;
+		  color: #4e5059;
+
+			&::after {
+			  content: "";
+			  border-bottom: solid 0.5px #4e5059;
+			}
+		}
+	}
 }
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th,
-:host(togostanza-scroll-table) .tableWrapper > table > tbody > tr > td {
-	padding: 4px;
-	overflow: auto;
-  position: relative;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th {
-  padding-top: 7px;
-  white-space: nowrap;
-  position: sticky;
-  background-color: var(--togostanza-thead-background-color);
-  z-index: 1;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead {
-  border-bottom: none;
-}
-:host(togostanza-scroll-table) .tableWrapper > table > thead > tr > th::after {
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: solid 1px #444;
-}
+
+/* ==============================
+ togostanza-hash-table
+============================== */
+
 :host(togostanza-hash-table) .container dl {
   padding: 0;
   line-height: 1.2;
@@ -443,6 +454,7 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
 :host(togostanza-hash-table) .container dd {
   padding: 7px 4px;
 }
+
 togostanza--menu {
   position: sticky;
   background-color: white;
