@@ -359,10 +359,14 @@ main .summary_table_wrapper .table > tbody > tr > td.ref-alt {
 					}
 
 					> tbody > tr {
-						border-bottom: var(--togostanza-tbody-border-bottom);
-
+						> td {
+							border-bottom: 1px solid #dee2e6;
+						}
+						
 						&:last-child {
-							border-bottom: none;
+							> td {
+								border-bottom: none;
+							}
 						}
 					}
 					
